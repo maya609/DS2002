@@ -1,64 +1,24 @@
-<header>
+# DS 2002: Data Project 1
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+## Members
+- Shaina Banduri
+- Diya Gupta
+- Maya Shah
 
-# Introduction to GitHub
+## Reflection Report: ETL Pipeline Implementation
 
-_Get started using GitHub in less than an hour._
+Throughout the implementation of our ETL (Extract, Transform, Load) pipeline, we encountered various challenges and insights that shaped our learning experience.
 
-</header>
+### Challenges Encountered
+One of the major challenges we faced was handling API data retrieval from OpenWeatherMap. Since API requests can fail due to rate limits or invalid responses, implementing the proper error handling was crucial. Additionally, merging the weather data with our local CSV dataset proved to be more complex than expected, as the two sources had different structures and required transformation before integration. Another challenge that we faced was ensuring data completeness. Some records lacked necessary latitude and longitude fields, making it difficult to fetch corresponding weather data.
 
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
+### Aspects That Were Easier Than Expected
+Certain aspects of the implementation were surprisingly straightforward. Basic data transformation tasks, such as dropping unnecessary columns and filtering records using Pandas, were relatively simple for us. Additionally, converting data formats and storing transformed data into an SQLite database was more intuitive than anticipated, due to built-in Pandas functionalities.
 
-## Finish
+### Aspects That Were More Difficult Than Expected
+Unfortunately, error handling for API calls turned out to be more complex than expected. Managing failed requests required implementing logic to retry requests or handle missing data appropriately. Furthermore, we faced an additional challenge in ensuring that the final dataset was structured correctly, as aligning data from different sources required extra processing steps.
 
-_Congratulations, you've completed this course and joined the world of developers!_
+### Future Applications of This ETL Utility
+This ETL pipeline can be a valuable tool for future data projects, particularly those that involve integrating multiple data sources. The ability to automate data extraction, transformation, and storage makes it scalable for larger datasets and different APIs. Additionally, the error-handling mechanisms and data-cleaning processes implemented in this project can be adapted for future applications to ensure robust data quality and integrity. This type of utility can be useful in data-driven decision-making, automating workflows, and supporting real-time data analysis.
 
-<img src=https://octodex.github.com/images/collabocats.jpg alt=celebrate width=300 align=right>
-
-Here's a recap of your accomplishments:
-
-- You learned about GitHub, repositories, branches, commits, and pull requests.
-- You created a branch, a commit, and a pull request.
-- You merged a pull request.
-- You made your first contribution! :tada:
-
-### What's next?
-
-If you'd like to make a profile README, use the quickstart instructions below or follow the instructions in the [Managing your profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) article.
-
-1. Make a new public repository with a name that matches your GitHub username.
-2. Create a file named `README.md` in its root. The "root" means not inside any folder in your repository.
-3. Edit the contents of the `README.md` file.
-4. If you created a new branch for your file, open and merge a pull request on your branch.
-5. Lastly, we'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github).
-
-Check out these resources to learn more or get involved:
-
-- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2024 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+Overall, this project provided valuable hands-on experience in designing an ETL pipeline, overcoming implementation challenges, and understanding best practices for data integration and transformation.
